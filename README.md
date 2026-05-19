@@ -1,5 +1,7 @@
 # SHISEIGYO-3 N1
 
+![SHISEIGYO-3 N1](images/main.jpg)
+
 リアクションホイール倒立振子モジュール  
 ESP32ベースのリアルタイム制御・ブラウザ調整対応。
 
