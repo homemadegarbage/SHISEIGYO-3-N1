@@ -53,6 +53,7 @@ mpu.setZAccelOffset(...);
 mpu.setXGyroOffset(...);
 mpu.setYGyroOffset(...);
 mpu.setZGyroOffset(...);
+```
 
 ## Features
 
