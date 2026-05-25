@@ -36,6 +36,24 @@ Version: 1.10.1 https://github.com/adafruit/Adafruit-GFX-Library
 ### Adafruit SSD1306
 Version: 2.4.1 https://github.com/adafruit/Adafruit_SSD1306
 
+## MPU6050 のオフセット調整
+
+MPU6050 のオフセット値はセンサ個体ごとに異なるため、使用するモジュールに合わせて調整してください。
+
+オフセット調整には、jrowberg/i2cdevlib の `IMU_Zero` サンプルを使用します。
+
+https://github.com/jrowberg/i2cdevlib/blob/master/Arduino/MPU6050/examples/IMU_Zero/IMU_Zero.ino
+
+MPU6050 を水平で安定した場所に置いて `IMU_Zero.ino` を実行し、出力された6軸分のオフセット値を本プログラム内に設定します。
+
+```cpp
+mpu.setXAccelOffset(...);
+mpu.setYAccelOffset(...);
+mpu.setZAccelOffset(...);
+mpu.setXGyroOffset(...);
+mpu.setYGyroOffset(...);
+mpu.setZGyroOffset(...);
+
 ## Features
 
 - リアクションホイール倒立制御
