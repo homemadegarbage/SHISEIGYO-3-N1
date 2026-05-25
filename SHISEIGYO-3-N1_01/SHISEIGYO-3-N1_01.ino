@@ -407,6 +407,13 @@ void setup() {
   Serial.println("Testing device connections...");
   Serial.println(mpu.testConnection() ? "MPU6050 connection successful" : "MPU6050 connection failed");
 
+  // MPU6050のオフセット値
+  // オフセット値はMPU6050の個体ごとに異なるため、使用するモジュールごとに調整する。
+  // 調整には jrowberg/i2cdevlib の IMU_Zero サンプルを使用する。
+  // https://github.com/jrowberg/i2cdevlib/blob/master/Arduino/MPU6050/examples/IMU_Zero/IMU_Zero.ino
+  //
+  // MPU6050を水平で安定した場所に置いて IMU_Zero を実行し、
+  // 出力された XAccel / YAccel / ZAccel / XGyro / YGyro / ZGyro の値を下記に設定する。
   mpu.setXAccelOffset(-5946);
   mpu.setYAccelOffset(-2558);
   mpu.setZAccelOffset(2113);
