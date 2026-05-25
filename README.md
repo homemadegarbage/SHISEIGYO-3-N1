@@ -15,6 +15,11 @@ ESP32ベースのリアルタイム制御・ブラウザ調整対応。
 - Shop  
   https://shop.homemadegarbage.com/product/s-3-n1/
 
+## Development Environment
+
+- Arduino IDE: ver. 1.8.19
+- ESP32 board package: ver. 2.0.13
+
 ## Required Libraries
 
 ### Kalman Filter Library
